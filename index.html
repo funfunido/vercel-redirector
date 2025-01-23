@@ -1,9 +1,32 @@
-<DOCTYPE html>
-  <html>
-    <head>
-<title>placeholder</title>
-    </head>
-    <body>
-      <h1>placeholder</h1>
-    </body>
-  </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vercel Redirector</title>
+</head>
+<body>
+    <form id="form" onsubmit="return false;">
+        <input style="position:absolute; top:50%; left:0%; width:10%;" type="text" id="userInput" />
+        <input style="position:absolute; top:80%; left:0%; width:10%;" type="submit" onclick="othername();" value="Redirect"  />
+    </form>
+    <script>
+    
+    function openInNewTab(url) {
+    if (url != "") {
+        window.open(url, '_blank').focus();
+    } else {
+        alert("You can't enter nothing");
+    }
+}
+    function othername() {
+        var input = document.getElementById("userInput").value;
+        //alert(input);
+        let httpthing = "https://"
+        let ending = ".vercel.app"
+        let finalurl = httpthing.concat("", input, ending)
+        //alert(finalurl)
+        openInNewTab(finalurl)
+    }
+    
+    </script>
+</body>
+</html>
