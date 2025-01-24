@@ -19,17 +19,14 @@
         alert("You can't enter nothing");
     }
 }
-function randomWord(callback) {
+function randomWord() {
 $.ajax({
 url: "https://random-words-api.vercel.app/word",
 success: function(result) {
-callback(result.word);
+alert(result[0]);
 }
 });
 }
-randomWord(function(word) {
-alert(word);
-});
         
     function othername() {
         var input = document.getElementById("userInput").value;
