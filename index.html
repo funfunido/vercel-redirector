@@ -23,7 +23,7 @@ function randomWord() {
 $.ajax({
 url: "https://random-words-api.vercel.app/word",
 success: function(result) {
-alert(result[0]);
+alert(result.word);
 }
 });
 }
