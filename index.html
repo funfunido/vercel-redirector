@@ -2,12 +2,14 @@
 <html>
 <head>
 <title>Vercel Redirector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <form id="form" onsubmit="return false;">
         <input style="position:absolute; top:50%; left:0%; width:10%;" type="text" id="userInput" />
         <input style="position:absolute; top:80%; left:0%; width:10%;" type="submit" onclick="othername();" value="Redirect"  />
     </form>
+    <button onclick="randomWord()">Random Word Button</button>
     <script>
     
     function openInNewTab(url) {
@@ -17,6 +19,14 @@
         alert("You can't enter nothing");
     }
 }
+function randomWord() {
+    var word;
+$.ajax({url: "https://random-words-api.vercel.app/word", success: function(result){
+    word = result.word;
+    alert(word)
+}});
+}
+        
     function othername() {
         var input = document.getElementById("userInput").value;
         //alert(input);
