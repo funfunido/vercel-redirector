@@ -35,11 +35,11 @@
   url: 'https://random-word.ryanrk.com/api/en/word/random',
   type: 'GET',
   success: function(data) {
-    alert("success")
+    alert(data)
     console.log(data);
   },
   error: function(error) {
-    alert("error")
+    alert("Sorry, the Random Word Redirector isn't working. You might be rate-limited. Try again later.")
     console.error(error);
   }
 });
