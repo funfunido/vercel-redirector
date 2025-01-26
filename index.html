@@ -35,8 +35,12 @@
   url: 'https://random-word.ryanrk.com/api/en/word/random',
   type: 'GET',
   success: function(data) {
-    alert(data)
-    console.log(data);
+    let httpthinga = "https://"
+    let endinga = ".vercel.app"
+    let finalrandomri = httpthinga.concat("", data, endinga)
+    openInNewTab(finalrandomri)
+      //alert(data)
+   // console.log(data);
   },
   error: function(error) {
     alert("Sorry, the Random Word Redirector isn't working. You might be rate-limited. Try again later.")
