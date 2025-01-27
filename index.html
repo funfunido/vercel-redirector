@@ -5,11 +5,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="container">
     <form id="form" onsubmit="return false;">
         <input style="position:absolute; top:50%; left:0%; width:10%; text-align:center;" type="text" id="userInput" />
         <input style="position:absolute; top:80%; left:0%; width:10%; text-align:center;" type="submit" onclick="othername();" value="Redirect"  />
     </form>
     <button style="position:absolute; top:90%; left:0%; width:10% text-align:center;" onclick="randomWord()">Random Word Button</button>
+        </div>
     <script>
     
     function openInNewTab(url) {
@@ -51,5 +53,20 @@
     }
         
     </script>
+    <style>
+        .container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Take up the full viewport height */
+  text-align: center; /* Center the text inside elements */
+}
+
+/* Optional: Style the h1, input, and button for better appearance */
+.container h1 {
+  margin-bottom: 20px;
+}
+    </style>
 </body>
 </html>
