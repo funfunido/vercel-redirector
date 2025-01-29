@@ -8,7 +8,6 @@
     </style>
 </head>
 <body>
-    <div id="thecontainer">
     <h1 id="thetitlething">Vercel Redirector</h1>
     <pre id="fireprething">
     Just type in a word without spaces or special characters, and click redirect, or press enter.
@@ -16,11 +15,12 @@
     Click Random Link, or press the "," (comma) key while not in the text box and it will redirect you to a vercel.app link of a random word.
     The Random Link might take a couple tries to get a link that is up, since not every link is registered in Vercel.
     </pre>
-    <form id="form" onsubmit="return false;">
+    <div class="centered-container">
+        <form id="form" onsubmit="return false;">
         <input style="position:absolute; top:50%; width:10%;" type="text" id="userInput" />
         <input style="position:absolute; top:60%; width:10%;" type="submit" onclick="othername();" value="Redirect"  />
-    </form>
-    <button style="position:absolute; top:70%; width:10%;" onclick="randomWord()">Random Link</button>
+        <button style="position:absolute; top:70%; width:10%;" onclick="randomWord()">Random Link</button>
+        </form>
     </div>
     <script>
     
@@ -71,10 +71,26 @@ $(document).keydown(function(event) {
     </script>
     <style>
 
-    #form {
-    display: inline-block;
-    text-align: center;
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, button {
+    margin: 10px;
+    width: 200px; /* You can adjust this width as needed */
+}
+
 #thetitlething {
     top: 30%;
     font-family: "Roboto Flex", serif;
@@ -82,13 +98,6 @@ $(document).keydown(function(event) {
     text-align: center;
 }
 
-#thecontainer {
-     /* align-items: center; */
-    /*display: flex;*/d
-    justify-content: center;
-    align-items: center;
-
-}
 
 #fireprething {
     top: 40%;
